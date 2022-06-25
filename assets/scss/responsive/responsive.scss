@@ -1,0 +1,43 @@
+@media (max-width: 918px) {
+    .container {
+        height: auto;
+    }
+
+    .product-colors {
+        margin: 0;
+    }
+
+    .container .imageBox {
+        padding: 40px;
+        box-sizing: border-box;
+        width: 100% !important;
+        height: auto;
+        text-align: center;
+        overflow: hidden;
+
+        & img {
+            left: initial;
+            max-width: 100%;
+            margin: 0;
+            transform: rotate(0deg);
+        }
+    }
+
+    .details {
+        width: 100% !important;
+        height: auto;
+        padding: 20px;
+    }
+
+}
+
+@media (max-width: 427px) {
+    p {
+        min-width: 100%;
+        overflow: hidden;
+        text-overflow: ellipsis;
+        display: -webkit-box;
+        -webkit-line-clamp: 5;
+        -webkit-box-orient: vertical;
+    }
+}

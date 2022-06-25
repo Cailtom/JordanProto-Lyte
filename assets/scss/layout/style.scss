@@ -1,0 +1,128 @@
+@use '../variables/variables.scss';
+
+.container {
+    background-color: variables.$White;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    margin: 20px;
+    width: 900px;
+    height: 600px;
+
+    & .imageBox {
+        background-color: variables.$Black-Suave;
+        background-image: url('/assets/images/backgrounds_tenis/bg-black.webp');
+        background-repeat: no-repeat;
+        background-size: cover;
+        transition: .3s linear;
+
+        &::before {
+            content: 'Nike';
+            color: variables.$White;
+            font-size: 8em;
+            font-weight: 800;
+            top: 0px;
+            left: 24px;
+            position: absolute;
+        }
+
+        & img {
+            margin-left: -30px;
+            transform: rotate(-30deg);
+            transition: .9s linear;
+            width: 620px;
+        }
+    }
+
+    @media (max-width: 360px) {
+        .imageBox::before {
+            font-size: 6em;
+        }
+    }
+
+    .details {
+        box-sizing: border-box;
+        padding: 40px;
+    
+        & h1 {
+            color: variables.$Black;
+            line-height: 1em;
+            font-size: 2.4em;
+    
+            & span {
+                text-transform: uppercase;
+                font-size: 0.3em;
+                letter-spacing: 2px;
+                color: variables.$Black;
+            }
+        }
+
+        @media (max-width: 470px) {
+            h1 {
+                font-size: 1.5em;
+            }
+        }
+    
+        & p {
+            color: variables.$Black-Suave-Secondary;
+            font-size: 15px;
+            font-weight: 600;
+            max-width: 85%;
+        }
+
+        @media (min-width: 918px) {
+            p {
+                margin-left: 10%;
+            }
+        }
+
+        & h2 {
+            color: variables.$Black;
+            font-size: 2.5em;
+            float: left;
+        }
+    
+        & button {
+            background-color: variables.$Black;
+            border: none;
+            border-radius: 10px;
+            color: variables.$White;
+            cursor: pointer;
+            outline: none;
+            float: left;
+            font-weight: 600;
+            font-size: 16px;
+            padding: 5px;
+            letter-spacing: 1px;
+            text-transform: uppercase;
+        }
+    
+        & .product-colors {
+            font-weight: 600;
+            color: variables.$Black-Suave;
+            padding: 9px;
+
+            span {
+                border-radius: 50%;
+                cursor: pointer;
+                display: inline-block;
+                top: 7px;
+                left: 10px;
+                width: 26px;
+                height: 26px;
+                margin-right: 12px;
+            }
+
+            & .active:after {
+                content: "";
+                width: 36px;
+                height: 36px;
+                border: 2px solid variables.$Black;
+                position: absolute;
+                border-radius: 50%;
+                box-sizing: border-box;
+                left: -5px;
+                top: -5px;
+            }
+        }
+    }
+}

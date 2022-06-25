@@ -1,0 +1,75 @@
+@use '../variables/variables.scss';
+@import "../fonts/fonts.scss";
+
+* {
+    -moz-user-select: none;
+    -webkit-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+}
+
+body {
+    background-color: variables.$Black;
+    background-image: url('/assets/images/backgrounds_body/body.webp');
+    background-size: cover;
+    background-repeat: no-repeat;
+    font-family: 'Poppins';
+    margin: 0;
+    padding: 0;
+}
+
+body,
+.container,
+.imageBox,
+.details {
+    display: flex;
+}
+
+.container,
+.imageBox .imageBox img,
+.product-colors span {
+    position: relative;
+}
+
+body,
+.imageBox,
+.details {
+    align-items: center;
+    justify-content: center;
+}
+
+.imageBox,
+.details {
+    width: 50%;
+    height: 100%;
+}
+
+.details h1,
+.details h2 {
+    margin: 0;
+    padding: 0;
+}
+
+::-webkit-scrollbar {
+    width: 0;
+}
+
+figure.imageBox {
+    margin: 0;
+}
+
+.black {
+    background-color: rgba(0, 0, 0, 0.959);
+}
+
+.red {
+    background-color: rgb(220, 20, 60);
+}
+
+.orange {
+    background-color: rgb(255, 165, 0);
+}
+
+p > span {
+    background-size: cover;
+}
